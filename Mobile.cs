@@ -26,7 +26,39 @@
  */
 public class Mobile
 {
-	public class Mobile() { }
+    string brand, model;
+    int batteryLevel = 0;
+    public Mobile(string brand, string model)
+    {
+        this.brand = brand;
+        this.model = model;
+    }
+
+    public void MakeCall(int number)
+    {
+        Console.Write("Calling " + number + " Press any Key to end");
+        Console.Read();
+    }
+    public void ChargeBattery(int battery)
+    {
+        batteryLevel = batteryLevel + battery > 100 ? 100 : batteryLevel + battery;
+        if (batteryLevel == 100) Console.WriteLine("Fully Charged!");
+        else Console.WriteLine("Charge: " + batteryLevel);
+
+    }
+    public void UseBattery(int battery)
+    {
+        batteryLevel = batteryLevel - battery < 0 ? 0 : batteryLevel - battery;
+        if (batteryLevel == 0) Console.WriteLine("Please Charge Your Phone!");
+        else Console.WriteLine("Charge: " + batteryLevel);
+    }
+    public void PrintDetails()
+    {
+        Console.WriteLine("===DETAILS===");
+        Console.WriteLine("Model: " + model);
+        Console.WriteLine("Brand: " + brand);
+        Console.WriteLine("Battery: " + batteryLevel + "%");
+    }
 
 }
 
