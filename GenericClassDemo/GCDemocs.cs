@@ -9,12 +9,11 @@ public class GCDemo <T>
 		this.b = b;	
 	}
 
-	public void Add()
+	public void PrintType()
 	{
-        Console.WriteLine($"Type of a: {a.GetType()}");
-        Console.WriteLine($"Type of b: {b.GetType()}");
+		if (a != null && b != null) {
+            Console.WriteLine($"Type of a: {a.GetType()}");
+            Console.WriteLine($"Type of b: {b.GetType()}");
+        }
     }
-
-
-
 }

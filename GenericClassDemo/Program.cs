@@ -9,8 +9,8 @@ class Program
     static void Main(string[] args)
     {
         GCDemo<int> myInt = new GCDemo<int>(1,2);
-        myInt.Add();
+        myInt.PrintType();
         GCDemo<string> myString = new GCDemo<string>("Hello"," World");
-        myString.Add();
+        myString.PrintType();
     }
 }
